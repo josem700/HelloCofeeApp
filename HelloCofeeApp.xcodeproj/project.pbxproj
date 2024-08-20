@@ -11,7 +11,27 @@
 		420EDEAD2C74B843005ACAB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEAC2C74B843005ACAB3 /* ContentView.swift */; };
 		420EDEAF2C74B845005ACAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420EDEAE2C74B845005ACAB3 /* Assets.xcassets */; };
 		420EDEB22C74B845005ACAB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420EDEB12C74B845005ACAB3 /* Preview Assets.xcassets */; };
+		420EDEBA2C74B884005ACAB3 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEB92C74B883005ACAB3 /* WebService.swift */; };
+		420EDEBD2C74B8D7005ACAB3 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEBC2C74B8D7005ACAB3 /* Order.swift */; };
+		420EDEBF2C74BC1B005ACAB3 /* CoffeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEBE2C74BC1B005ACAB3 /* CoffeeModel.swift */; };
+		420EDEC22C74F3E1005ACAB3 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEC12C74F3E1005ACAB3 /* NumberFormatter+Extensions.swift */; };
+		420EDEC52C74F4E4005ACAB3 /* OrderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEC42C74F4E4005ACAB3 /* OrderCellView.swift */; };
+		420EDEC82C74F73D005ACAB3 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEC72C74F73D005ACAB3 /* AppEnvironment.swift */; };
+		420EDED02C74FDF0005ACAB3 /* HelloCofeeE2ETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDECF2C74FDF0005ACAB3 /* HelloCofeeE2ETests.swift */; };
+		420EDED92C750418005ACAB3 /* AddCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDED82C750418005ACAB3 /* AddCoffeeView.swift */; };
+		420EDEDB2C750600005ACAB3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEDA2C750600005ACAB3 /* View+Extensions.swift */; };
+		420EDEDD2C750CA2005ACAB3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEDC2C750CA2005ACAB3 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		420EDED32C74FDF0005ACAB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 420EDE9F2C74B843005ACAB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 420EDEA62C74B843005ACAB3;
+			remoteInfo = HelloCofeeApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		420EDEA72C74B843005ACAB3 /* HelloCofeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCofeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +39,28 @@
 		420EDEAC2C74B843005ACAB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		420EDEAE2C74B845005ACAB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		420EDEB12C74B845005ACAB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		420EDEB92C74B883005ACAB3 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		420EDEBC2C74B8D7005ACAB3 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		420EDEBE2C74BC1B005ACAB3 /* CoffeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeModel.swift; sourceTree = "<group>"; };
+		420EDEC12C74F3E1005ACAB3 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		420EDEC42C74F4E4005ACAB3 /* OrderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellView.swift; sourceTree = "<group>"; };
+		420EDEC72C74F73D005ACAB3 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		420EDECD2C74FDEF005ACAB3 /* HelloCofeeE2ETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloCofeeE2ETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		420EDECF2C74FDF0005ACAB3 /* HelloCofeeE2ETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloCofeeE2ETests.swift; sourceTree = "<group>"; };
+		420EDED82C750418005ACAB3 /* AddCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeView.swift; sourceTree = "<group>"; };
+		420EDEDA2C750600005ACAB3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		420EDEDC2C750CA2005ACAB3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		420EDEA42C74B843005ACAB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		420EDECA2C74FDEF005ACAB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				420EDEA92C74B843005ACAB3 /* HelloCofeeApp */,
+				420EDECE2C74FDF0005ACAB3 /* HelloCofeeE2ETests */,
 				420EDEA82C74B843005ACAB3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				420EDEA72C74B843005ACAB3 /* HelloCofeeApp.app */,
+				420EDECD2C74FDEF005ACAB3 /* HelloCofeeE2ETests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +91,11 @@
 		420EDEA92C74B843005ACAB3 /* HelloCofeeApp */ = {
 			isa = PBXGroup;
 			children = (
+				420EDEC62C74F731005ACAB3 /* Utils */,
+				420EDEC32C74F4CF005ACAB3 /* Views */,
+				420EDEC02C74F3C4005ACAB3 /* Extensions */,
+				420EDEBB2C74B8CB005ACAB3 /* Models */,
+				420EDEB82C74B872005ACAB3 /* Services */,
 				420EDEAA2C74B843005ACAB3 /* HelloCofeeAppApp.swift */,
 				420EDEAC2C74B843005ACAB3 /* ContentView.swift */,
 				420EDEAE2C74B845005ACAB3 /* Assets.xcassets */,
@@ -65,6 +110,58 @@
 				420EDEB12C74B845005ACAB3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		420EDEB82C74B872005ACAB3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				420EDEB92C74B883005ACAB3 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		420EDEBB2C74B8CB005ACAB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				420EDEBC2C74B8D7005ACAB3 /* Order.swift */,
+				420EDEBE2C74BC1B005ACAB3 /* CoffeeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		420EDEC02C74F3C4005ACAB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				420EDEC12C74F3E1005ACAB3 /* NumberFormatter+Extensions.swift */,
+				420EDEDA2C750600005ACAB3 /* View+Extensions.swift */,
+				420EDEDC2C750CA2005ACAB3 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		420EDEC32C74F4CF005ACAB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				420EDEC42C74F4E4005ACAB3 /* OrderCellView.swift */,
+				420EDED82C750418005ACAB3 /* AddCoffeeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		420EDEC62C74F731005ACAB3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				420EDEC72C74F73D005ACAB3 /* AppEnvironment.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		420EDECE2C74FDF0005ACAB3 /* HelloCofeeE2ETests */ = {
+			isa = PBXGroup;
+			children = (
+				420EDECF2C74FDF0005ACAB3 /* HelloCofeeE2ETests.swift */,
+			);
+			path = HelloCofeeE2ETests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +184,24 @@
 			productReference = 420EDEA72C74B843005ACAB3 /* HelloCofeeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		420EDECC2C74FDEF005ACAB3 /* HelloCofeeE2ETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 420EDED52C74FDF0005ACAB3 /* Build configuration list for PBXNativeTarget "HelloCofeeE2ETests" */;
+			buildPhases = (
+				420EDEC92C74FDEF005ACAB3 /* Sources */,
+				420EDECA2C74FDEF005ACAB3 /* Frameworks */,
+				420EDECB2C74FDEF005ACAB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				420EDED42C74FDF0005ACAB3 /* PBXTargetDependency */,
+			);
+			name = HelloCofeeE2ETests;
+			productName = HelloCofeeE2ETests;
+			productReference = 420EDECD2C74FDEF005ACAB3 /* HelloCofeeE2ETests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +214,10 @@
 				TargetAttributes = {
 					420EDEA62C74B843005ACAB3 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					420EDECC2C74FDEF005ACAB3 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 420EDEA62C74B843005ACAB3;
 					};
 				};
 			};
@@ -116,6 +235,7 @@
 			projectRoot = "";
 			targets = (
 				420EDEA62C74B843005ACAB3 /* HelloCofeeApp */,
+				420EDECC2C74FDEF005ACAB3 /* HelloCofeeE2ETests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +250,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		420EDECB2C74FDEF005ACAB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +264,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420EDEBA2C74B884005ACAB3 /* WebService.swift in Sources */,
+				420EDEDD2C750CA2005ACAB3 /* String+Extensions.swift in Sources */,
+				420EDEC52C74F4E4005ACAB3 /* OrderCellView.swift in Sources */,
+				420EDEBF2C74BC1B005ACAB3 /* CoffeeModel.swift in Sources */,
+				420EDEC22C74F3E1005ACAB3 /* NumberFormatter+Extensions.swift in Sources */,
+				420EDED92C750418005ACAB3 /* AddCoffeeView.swift in Sources */,
 				420EDEAD2C74B843005ACAB3 /* ContentView.swift in Sources */,
+				420EDEC82C74F73D005ACAB3 /* AppEnvironment.swift in Sources */,
+				420EDEBD2C74B8D7005ACAB3 /* Order.swift in Sources */,
+				420EDEDB2C750600005ACAB3 /* View+Extensions.swift in Sources */,
 				420EDEAB2C74B843005ACAB3 /* HelloCofeeAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		420EDEC92C74FDEF005ACAB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				420EDED02C74FDF0005ACAB3 /* HelloCofeeE2ETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		420EDED42C74FDF0005ACAB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 420EDEA62C74B843005ACAB3 /* HelloCofeeApp */;
+			targetProxy = 420EDED32C74FDF0005ACAB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		420EDEB32C74B845005ACAB3 /* Debug */ = {
@@ -280,6 +432,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +462,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +473,40 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		420EDED62C74FDF0005ACAB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TZLRP2ZUSX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = josem.HelloCofeeE2ETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloCofeeApp;
+			};
+			name = Debug;
+		};
+		420EDED72C74FDF0005ACAB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TZLRP2ZUSX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = josem.HelloCofeeE2ETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloCofeeApp;
 			};
 			name = Release;
 		};
@@ -339,6 +527,15 @@
 			buildConfigurations = (
 				420EDEB62C74B845005ACAB3 /* Debug */,
 				420EDEB72C74B845005ACAB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		420EDED52C74FDF0005ACAB3 /* Build configuration list for PBXNativeTarget "HelloCofeeE2ETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				420EDED62C74FDF0005ACAB3 /* Debug */,
+				420EDED72C74FDF0005ACAB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
