@@ -14,6 +14,7 @@ struct AddCoffeeErrors {
 }
 
 struct AddCoffeeView: View {
+    var order: Order? = nil
     @State private var name: String = ""
     @State private var coffeeName: String = ""
     @State private var price: String = ""
@@ -44,8 +45,7 @@ struct AddCoffeeView: View {
         return errors.name.isEmpty && errors.price.isEmpty && errors.coffeeName.isEmpty
     }
     
-    private func placeOrder() async{
-        let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0, size: coffeeSize)
+    private func placeOrder(_ order: Order) async{
         do {
             try await model.placeOrder(order)
             //dismiss
@@ -53,6 +53,39 @@ struct AddCoffeeView: View {
         } catch {
             print(error)
         }
+    }
+    
+    private func populateExistingOrder() {
+        if let order = order {
+            name = order.name
+            coffeeName = order.coffeeName
+            price = String(order.total)
+            coffeeSize = order.size
+        }
+    }
+    
+    private func updateOrder(_ order: Order) async {
+        do{
+            try await model.updateOrder(order)
+        }catch{
+            print(error)
+        }
+    }
+    
+    private func saveOrUpdate() async {
+        if let order {
+            var editOrder = order
+            editOrder.name = name
+            editOrder.total = Double(price) ?? 0.0
+            editOrder.coffeeName = coffeeName
+            editOrder.size = coffeeSize
+            await updateOrder(editOrder)
+        } else {
+            let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0, size: coffeeSize)
+            await placeOrder(order)
+        }
+        
+        dismiss()
     }
     
     var body: some View {
@@ -70,22 +103,41 @@ struct AddCoffeeView: View {
                     .accessibilityIdentifier("price")
                 Text(errors.price).visible(!errors.price.isEmpty)
                     .font(.caption)
+                
                 Picker("Select size", selection: $coffeeSize){
                     ForEach(CoffeeSize.allCases, id: \.rawValue) {size in
                         Text(size.rawValue).tag(size)
                     }
                 }.pickerStyle(.segmented)
+                    
                 
-                Button("Place Order") {
+                Button() {
                     if isValid {
                         //Realizar orden
                         Task{
-                            await placeOrder()
+                            await saveOrUpdate()
                         }
                     }
-                }.accessibilityIdentifier("placeOrderButton")
+                } label: {
+                    HStack{
+                        Text(order != nil ? "Update Order" : "Place Order")
+                            .fontWeight(.semibold)
+                        Image(systemName: "arrow.right")
+                    }
+                    .foregroundStyle(.white)
+                    .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                }
+                .background(Colors().teal)
+                .clipShape(.rect(cornerRadius: 10))
+                .padding(.top, 10)
+                .accessibilityIdentifier("placeOrderButton")
                     .centerHorizontally()
-            }.navigationTitle("Add Cofee")
+            }
+            .scrollContentBackground(.hidden)
+            .navigationTitle(order != nil ? "Update Coffee" : "Add Cofee")
+            .onAppear() {
+                populateExistingOrder()
+            }
         }
     }
 }

@@ -15,6 +15,7 @@ struct OrderCellView: View {
                 Text(order.name)
                     .accessibilityIdentifier("orderNameText")
                     .bold()
+                    .font(.title)
                 
                 Text("\(order.coffeeName) (\(order.size.rawValue))")
                     .accessibilityIdentifier("coffeeNameAndSizeText")
@@ -23,6 +24,13 @@ struct OrderCellView: View {
                 Spacer()
                 Text(order.total as NSNumber, formatter: NumberFormatter.currency)
                     .accessibilityIdentifier("coffeePriceText")
+                    .font(.title3)
+                    .bold()
+                    .opacity(0.5)
         }
     }
+}
+
+#Preview {
+    OrderCellView(order: Order(id: 0, name: "Juan", coffeeName: "Capucchino", total: 2.20, size: CoffeeSize.large))
 }

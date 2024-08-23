@@ -21,6 +21,7 @@
 		420EDED92C750418005ACAB3 /* AddCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDED82C750418005ACAB3 /* AddCoffeeView.swift */; };
 		420EDEDB2C750600005ACAB3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEDA2C750600005ACAB3 /* View+Extensions.swift */; };
 		420EDEDD2C750CA2005ACAB3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EDEDC2C750CA2005ACAB3 /* String+Extensions.swift */; };
+		422882952C78B2AC00226106 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422882942C78B2AC00226106 /* OrderDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		420EDED82C750418005ACAB3 /* AddCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeView.swift; sourceTree = "<group>"; };
 		420EDEDA2C750600005ACAB3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		420EDEDC2C750CA2005ACAB3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		422882942C78B2AC00226106 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				420EDEC42C74F4E4005ACAB3 /* OrderCellView.swift */,
 				420EDED82C750418005ACAB3 /* AddCoffeeView.swift */,
+				422882942C78B2AC00226106 /* OrderDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				420EDEBA2C74B884005ACAB3 /* WebService.swift in Sources */,
 				420EDEDD2C750CA2005ACAB3 /* String+Extensions.swift in Sources */,
+				422882952C78B2AC00226106 /* OrderDetailView.swift in Sources */,
 				420EDEC52C74F4E4005ACAB3 /* OrderCellView.swift in Sources */,
 				420EDEBF2C74BC1B005ACAB3 /* CoffeeModel.swift in Sources */,
 				420EDEC22C74F3E1005ACAB3 /* NumberFormatter+Extensions.swift in Sources */,

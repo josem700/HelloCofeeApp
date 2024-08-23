@@ -7,18 +7,28 @@
 // Este archivo contiene las variables de entorno usadas en la app
 
 import Foundation
+import SwiftUI
 
 enum EndPoints {
     //EndPoints para las url
     case allOrders
     case placeOrder
+    case deleteOrder(Int)
+    case updateOrder(Int)
     
     var path: String {
         switch self {
-        case .allOrders:
-            return "/test/orders"
-        case .placeOrder:
-            return "/test/new-order"
+            case .allOrders:
+                return "/test/orders"
+            
+            case .placeOrder:
+                return "/test/new-order"
+            
+            case .deleteOrder(let orderId):
+                return "/test/orders/\(orderId)"
+            
+            case .updateOrder(let orderId):
+                return "/test/orders/\(orderId)"
         }
     }
 }
@@ -51,4 +61,12 @@ enum AppEnvironment: String{
             return URL(string: "https://island-bramble.glitch.me")!
         }
     }
+}
+
+struct Colors {
+    let white = Color(red: 238/255, green: 247/255, blue: 255/255)
+    let cyan = Color(red: 205/255, green: 232/255, blue: 229/255)
+    let teal = Color(red: 122/255, green: 178/255, blue: 178/255)
+    let blue = Color(red: 77/255, green: 134/255, blue: 156/255)
+    let red = Color(red: 223/255, green: 130/255, blue: 108/255)
 }
