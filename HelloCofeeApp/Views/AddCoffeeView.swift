@@ -20,6 +20,9 @@ struct AddCoffeeView: View {
     @State private var coffeeSize: CoffeeSize = .medium
     @State private var errors: AddCoffeeErrors = AddCoffeeErrors()
     
+    @EnvironmentObject private var model: CoffeeModel
+    @Environment(\.dismiss) private var dismiss
+    
     var isValid: Bool {
         errors = AddCoffeeErrors()
         if name.isEmpty {
@@ -41,32 +44,48 @@ struct AddCoffeeView: View {
         return errors.name.isEmpty && errors.price.isEmpty && errors.coffeeName.isEmpty
     }
     
+    private func placeOrder() async{
+        let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0, size: coffeeSize)
+        do {
+            try await model.placeOrder(order)
+            //dismiss
+            dismiss()
+        } catch {
+            print(error)
+        }
+    }
+    
     var body: some View {
-        Form {
-            TextField("Name", text: $name)
-                .accessibilityIdentifier("name")
-            Text(errors.name).visible(!errors.name.isEmpty)
-                .font(.caption)
-            TextField("Coffee Name", text: $coffeeName)
-                .accessibilityIdentifier("coffeeName")
-            Text(errors.coffeeName).visible(!errors.coffeeName.isEmpty)
-                .font(.caption)
-            TextField("Price", text: $price)
-                .accessibilityIdentifier("price")
-            Text(errors.price).visible(!errors.price.isEmpty)
-                .font(.caption)
-            Picker("Select size", selection: $coffeeSize){
-                ForEach(CoffeeSize.allCases, id: \.rawValue) {size in
-                    Text(size.rawValue).tag(size)
-                }
-            }.pickerStyle(.segmented)
-            
-            Button("Place Order") {
-                if isValid {
-                    //Realizar orden
-                }
-            }.accessibilityIdentifier("placeOrderButton")
-                .centerHorizontally()
+        NavigationStack {
+            Form {
+                TextField("Name", text: $name)
+                    .accessibilityIdentifier("name")
+                Text(errors.name).visible(!errors.name.isEmpty)
+                    .font(.caption)
+                TextField("Coffee Name", text: $coffeeName)
+                    .accessibilityIdentifier("coffeeName")
+                Text(errors.coffeeName).visible(!errors.coffeeName.isEmpty)
+                    .font(.caption)
+                TextField("Price", text: $price)
+                    .accessibilityIdentifier("price")
+                Text(errors.price).visible(!errors.price.isEmpty)
+                    .font(.caption)
+                Picker("Select size", selection: $coffeeSize){
+                    ForEach(CoffeeSize.allCases, id: \.rawValue) {size in
+                        Text(size.rawValue).tag(size)
+                    }
+                }.pickerStyle(.segmented)
+                
+                Button("Place Order") {
+                    if isValid {
+                        //Realizar orden
+                        Task{
+                            await placeOrder()
+                        }
+                    }
+                }.accessibilityIdentifier("placeOrderButton")
+                    .centerHorizontally()
+            }.navigationTitle("Add Cofee")
         }
     }
 }
